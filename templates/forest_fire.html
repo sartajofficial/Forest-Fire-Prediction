@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Forest Fire Prediction</title>
+
+  <!-- CSS  -->
+   <style>
+body {
+  background-image: url('./static/images/Amazon-Rain-Forest.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style> 
+    
+    
+    
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="green" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">ML</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Project</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Project</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="body" id="index-banner">
+    <div class="white-text bold container">
+      <br><br>
+      <h1 class="header center orange-text">Forest Fire Prevention</h1>
+      <div class="row center">
+        <h5 class="white-text header col s12 strong">Predict the probability of Forest-Fire Occurence
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label class="orange-text text-lighten-5" for="first_name"><b>Temperature</b></label>
+            <br>
+          <input placeholder="Temperature in Celsius" name="Temperature" id="first_name" type="text" class="white-text validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label class="orange-text text-lighten-5" for="last_name"><b>Oxygen </b></label>
+            <br>
+          <input id="last_name" name="Oxygen" placeholder="Oxygen content in ppm"  type="text" class="white-text validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label class="orange-text text-lighten-5" for="_name"><b>Humidity</b></label>
+            <br>
+          <input id="_name" name="Humidity" placeholder="Humidity %" type="text" class="white-text validate">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+        {{pred}}<br>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Team & Project Details</h5>
+          <p class="grey-text text-lighten-4">We,SARTAJ & DHARMENDRA, are a team of college students working on this project. This project uses ML algorithm to predict the probability of Forest Fire based on three factors. Follow us to know more..</p>
+
+        </div>
+        
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="https://instagram.com/itzz_sartaj?igshid=sn41q9bxgdkl">Insta/Sartaj</a></li>
+            <li><a class="white-text" href="https://instagram.com/dharmendra.nsingh?igshid=1qxl35v0v8b9u">Insta/Dharmendra</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Designed by <a class="orange-text text-lighten-3" href="https://instagram.com/itzz_sartaj?igshid=sn41q9bxgdkl">Sartaj & Dharmendra</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
